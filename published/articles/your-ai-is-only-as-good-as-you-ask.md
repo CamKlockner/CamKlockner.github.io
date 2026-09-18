@@ -1,0 +1,57 @@
+# Your AI Is Only as Good as You Ask
+
+*Prompting*
+
+**Cam Klockner** — Jun 01, 2026
+
+Most people using AI tools — ChatGPT, Claude, Copilot, Gemini, and other assistants — are leaving most of the value on the table. Not because the tools are hard. Because nobody taught them how to ask. These strategies separate the novice from users who get fast, accurate, useful results rather than vague answers and frustration. Whether writing marketing copy, drafting emails, researching a topic, or building a business plan — these strategies work across every AI platform every time.
+
+You've used AI tools. You know the basics. Type a request, get a response. That's a prompt. But a simple question gets a simple answer — and AI is not a search engine. The more context, direction, and intention packed into a prompt, the better the response. Think of it like briefing a very smart colleague who knows everything but has no common sense. Clearer instructions produce better responses. The strategies below turn a basic request into a prompt that delivers accurate, useful, on-target results — every time.
+
+## 1. State the request in plain English.
+
+The simpler and more direct the request, the more complete and useful the response. Don't warm up. Don't explain the backstory. Lead with what's needed.
+
+Example: "Write a three paragraph email declining a vendor" is a prompt. "I've been thinking about this vendor situation" is not. One gives the AI a job. The other gives it a puzzle.
+
+## 2. Tell the AI who it's writing for.
+
+Audience drives the response more than almost anything else. The same information written for a CEO reads completely differently than the same information written for a first year employee. The AI will nail the tone — but only if it knows who's reading.
+
+Example: "Explain this to a small business owner with no technical background" produces a completely different and more useful response than the same prompt without that line.
+
+## 3. Brief the AI with context.
+
+Background, constraints, and purpose — what the AI needs to know to get the answer right. Don't make it guess at what matters. It will guess. It will be wrong.
+
+Example: "I'm writing to a long-term client who just complained about a late delivery — the tone needs to acknowledge the problem without admitting liability" gives the AI everything it needs. "Write a client email" gives it nothing.
+
+## 4. Specify the output format.
+
+Bullet list, narrative, table, numbered steps, length. If format isn't specified, the AI defaults to whatever it thinks is appropriate — which is usually longer, wordier, and less useful than what's actually needed. It loves to talk.
+
+Example: "Give me a five bullet summary" and "write a two paragraph explanation" produce completely different responses to the same question. Pick the format before the AI picks it for you.
+
+## 5. Use examples.
+
+A bad example still beats a description — but the better and more specific the example, the closer the response will be to what's actually needed. This is the most underused move in prompting.
+
+Example: "Write it like this email I'm pasting — same length, less formal" gets better results than three sentences trying to describe the tone. Show the AI what's needed. Don't just describe it.
+
+## 6. Tell the AI to get to the point.
+
+AI responses default to preamble, theory, background, and recap. Nobody asked for the lecture. Ask for the answer, not the journey to the answer.
+
+Example: Add "no preamble, no recap, no filler — just the answer" to any prompt. The response will be tighter, more direct, and more useful immediately. Try it once and it becomes a reflex.
+
+## 7. The first response is a first draft.
+
+Push back. Correct specifically. Ask for options. "Give me three versions of this" or "show me two different approaches" produces choices to work from instead of struggling to describe what's wrong with a single response. The prompt is a conversation, not a transaction — talk to it like the colleague it's trying to be.
+
+Example: "This is too formal — give me three versions at different levels of casual" works. Deleting and retyping the same prompt and hoping for a different result is the definition of something engineers would never do.
+
+Iteration is normal — it's how the best results get made. Two or three exchanges on a simple task, more on a complex one. Talk to it. Discuss it. Push it. Each response gets closer to exactly what's needed. There are no wrong questions and no bad prompts. AI will engage with anything thrown at it — good, bad, or half-formed. The only wasted prompt is the one never written.
+
+Every job handed to an AI is unique. These strategies work well for many requests — straightforward ones especially. Prompting is a skill, and like any skill it sharpens with use. The more prompts written, the better the responses get. Stay with it. Before long you'll be writing your own version of this post — and it should be better than this one.
+
+*R. Campbell Klockner writes about engineering, technology, and tools that reshape how we work.*
