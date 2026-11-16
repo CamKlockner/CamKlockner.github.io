@@ -2,94 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Claude.AI, Cowork and Book Writing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude, Book Writing, and File Organization</title>
   <link rel="stylesheet" href="../../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+  <style>
+  body{background:#fff;color:#1F2A22;font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-size:19px;line-height:1.58;max-width:700px}
+  a.back{color:#2D5A3D;font-size:15px}
+  header.plate{display:flex;gap:1.25rem;align-items:center;padding-bottom:1.25rem;border-bottom:3px solid #2D5A3D;box-shadow:0 4px 0 #fff,0 5px 0 #B8862B;margin-bottom:2rem}
+  header.plate .badge{flex:0 0 104px}header.plate .badge svg{width:104px;height:104px;display:block}
+  .badge .ff,.badge .fm{fill:#2D5A3D}.badge .dp{fill:#1E3D2A}.badge .sd{fill:#E6DCC6}.badge .st{fill:#1E3D2A;opacity:.45}.badge .af{fill:#B8862B}.badge .bgf{fill:#fff}.badge .sun{fill:#E8A92A}
+  .badge .ray{fill:none;stroke:#E8A92A;stroke-width:2.2;stroke-linecap:round}.badge .cl{fill:none;stroke:#8FA89A;stroke-width:2.4;stroke-linecap:round}.badge .wt{fill:none;stroke:#1F2A22;stroke-width:2;stroke-dasharray:5 3.5}
+  .badge .wl2{fill:#fff;stroke:#1F2A22;stroke-width:1.6;stroke-linejoin:round}.badge .wl3{fill:none;stroke:#1F2A22;stroke-width:1.2}.badge .gs{fill:none;stroke:#2D5A3D;stroke-width:2.4}.badge .bk{fill:#1F2422}
+  .badge .bkl{fill:none;stroke:#1F2422;stroke-width:1.6;stroke-linecap:round}.badge .pn{fill:#7C8381}.badge .tb{fill:#C9CDCB;stroke:#1F2422;stroke-width:1}.badge .wv{fill:none;stroke:#F3EDE0;stroke-width:1.6;stroke-linecap:round;opacity:.55}
+  .badge .gr{fill:none;stroke:#2D5A3D;stroke-width:1.4;stroke-linecap:round}.badge .gl{fill:none;stroke:#2D5A3D;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.badge .ring{fill:none;stroke:#2D5A3D;stroke-width:3}.badge .ring2{fill:none;stroke:#2D5A3D;stroke-width:1.5}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#8A6212;margin:0 0 .4rem}
+  header.plate h1{font-family:"Alfa Slab One",Rockwell,Georgia,serif;font-weight:400;color:#2D5A3D;font-size:clamp(28px,6.2vw,40px);line-height:1.15;margin:0 0 .5rem;text-wrap:balance}
+  .dek{font-style:italic;margin:0 0 .35rem;font-size:17px}
+  header.plate p.meta{font-family:inherit;color:#5A6358;font-size:15px;margin:0}
+  .notice{background:#F6F2E9;border-left:4px solid #B8862B;border-radius:0 8px 8px 0;padding:.8rem 1rem;font-size:16px;font-style:italic;color:#1F2A22}
+  .lead::first-letter{font-family:"Alfa Slab One",Rockwell,Georgia,serif;color:#2D5A3D;float:left;font-size:3.6em;line-height:.82;padding:.08em .1em 0 0}
+  article h2{font-family:"Alfa Slab One",Rockwell,Georgia,serif;font-weight:400;color:#2D5A3D;font-size:clamp(22px,5vw,28px);line-height:1.2;margin:3rem 0 1rem;text-wrap:balance}
+  article h2::after{content:"";display:block;width:56px;height:4px;background:#B8862B;margin-top:.5rem}
+  blockquote.pull{margin:2rem 0;padding:1.1rem 1.25rem;background:#F6F2E9;border-radius:8px;border-top:3px solid #2D5A3D;color:#2D5A3D;font-style:italic;font-size:clamp(20px,4.6vw,24px);line-height:1.4;text-wrap:pretty}
+  figure.machine{margin:2rem 0;padding:1.25rem 1rem 1rem;border:1px solid #D9CFBC;border-radius:8px;text-align:center}
+  figure.machine svg{width:100%;max-width:480px;height:auto}
+  figure.machine .lbl{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:15px;letter-spacing:.08em;fill:#1F2A22}
+  figure.machine .sm{font-family:"Source Serif 4",Georgia,serif;font-style:italic;font-size:14px;fill:#5A6358}
+  figcaption{font-size:15px;color:#5A6358;margin-top:.5rem}
+  .folders{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.5rem 0}
+  .folder{background:#F6F2E9;border-radius:8px;border-top:4px solid #2D5A3D;padding:.9rem 1rem}
+  .folder h3{font-size:13px;font-weight:600;letter-spacing:.16em;color:#8A6212;margin:0 0 .4rem}
+  .folder p{font-size:16px;line-height:1.5;margin:0}
+  .orn{display:flex;justify-content:center;margin:3rem 0 2rem}.orn span{width:120px;height:3px;background:#2D5A3D;box-shadow:0 5px 0 #B8862B}
+  .signoff{margin-top:2rem;font-weight:600}.about{color:#5A6358;font-size:15px;border-top:1px solid #D9CFBC;padding-top:1rem}
+  @media (max-width:600px){body{font-size:18px}.folders{grid-template-columns:1fr}header.plate .badge{flex-basis:76px}header.plate .badge svg{width:76px;height:76px}}
+  </style>
 </head>
 <body>
 
   <a class="back" href="../../index.html">&larr; Back to home</a>
 
-  <header>
-    <h1>Claude.AI, Cowork and Book Writing</h1>
-    <p class="subtitle">Process &mdash; Cam Klockner, Sep 18, 2026</p>
+  <header class="plate">
+    <div class="badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400" role="img" aria-label="Shore badge: a Barnegat Bay beach with pines, dune grass and a deep well, a StarCraft RX pontoon, sun, cloud and gulls" xmlns:c2pa="http://c2pa.org/manifest"><title>Shore badge</title><defs><clipPath id="c"><circle cx="100" cy="100" r="90"></circle></clipPath></defs>
+<circle class="bgf" cx="100" cy="100" r="90"></circle>
+<g clip-path="url(#c)">
+<circle class="sun" cx="146" cy="50" r="15"></circle>
+<path class="ray" d="M146 26 V30 M146 70 V74 M122 50 H126 M166 50 H170 M129 33 L132 36 M160 64 L163 67 M163 33 L160 36 M132 64 L129 67"></path>
+<path class="cl" d="M52 40 C64 34 82 36 94 40 M66 47 C78 43 94 44 108 48 M44 48 H56"></path>
+<path class="gl" d="M92 66 q4 -4 8 0 q4 -4 8 0 M110 58 q3 -3 6 0 q3 -3 6 0"></path>
+<path class="sd" d="M0 100 C40 102 80 112 112 120 H200 V200 H0 Z"></path>
+<path class="dp" d="M0 158 C50 152 110 162 200 170 V200 H0 Z"></path>
+<g class="st"><circle cx="10" cy="114" r="0.9"></circle><circle cx="22" cy="130" r="0.9"></circle><circle cx="34" cy="144" r="0.9"></circle><circle cx="66" cy="124" r="0.9"></circle><circle cx="70" cy="140" r="0.9"></circle><circle cx="84" cy="130" r="0.9"></circle><circle cx="96" cy="142" r="0.9"></circle><circle cx="14" cy="148" r="0.9"></circle><circle cx="58" cy="116" r="0.9"></circle><circle cx="78" cy="150" r="0.9"></circle><circle cx="102" cy="134" r="0.9"></circle><circle cx="120" cy="158" r="0.9"></circle><circle cx="140" cy="162" r="0.9"></circle><circle cx="28" cy="112" r="0.9"></circle><circle cx="90" cy="124" r="0.9"></circle><circle cx="8" cy="132" r="0.9"></circle><circle cx="64" cy="132" r="0.9"></circle></g>
+<path class="wt" d="M0 120 C18 120 34 123 53 136 M59 136 C68 124 80 121 112 120"></path>
+<path class="af" d="M14 110 H24 L19 116 Z"></path>
+<path class="wl2" d="M53 101.2 V152 M59 101.2 V152 M53 152 H59"></path>
+<path class="wl3" d="M54 138 H58 M54 142 H58 M54 146 H58 M54 150 H58"></path>
+<path class="wl2" d="M56 101.2 V97.2 H65"></path>
+<path class="gs" d="M0 100 C40 102 80 112 112 120"></path>
+<path class="ff" d="M22 61.0 L27.5 78.6 L16.5 78.6 Z"></path><path class="ff" d="M22 72.2 L29.8 87.4 L14.2 87.4 Z"></path><path class="ff" d="M22 83.4 L32.0 96.2 L12.0 96.2 Z"></path><rect class="ff" x="20" y="95.4" width="4" height="5.6"></rect><path class="ff" d="M38 48.0 L45.1 71.8 L30.9 71.8 Z"></path><path class="ff" d="M38 63.1 L48.1 83.6 L27.9 83.6 Z"></path><path class="ff" d="M38 78.2 L51.0 95.5 L25.0 95.5 Z"></path><rect class="ff" x="36" y="94.4" width="4" height="7.6"></rect>
+<path class="gr" d="M69 105.45458357246305 Q71 108.45458357246305 72 110.45458357246305 M72 103.45458357246305 V110.45458357246305 M75 105.45458357246305 Q73 108.45458357246305 72 110.45458357246305 M79 107.70147536676808 Q81 110.70147536676808 82 112.70147536676808 M82 105.70147536676808 V112.70147536676808 M85 107.70147536676808 Q83 110.70147536676808 82 112.70147536676808 M88 109.82264277350929 Q90 112.82264277350929 91 114.82264277350929 M91 107.82264277350929 V114.82264277350929 M94 109.82264277350929 Q92 112.82264277350929 91 114.82264277350929 M97 112.01433513758623 Q99 115.01433513758623 100 117.01433513758623 M100 110.01433513758623 V117.01433513758623 M103 112.01433513758623 Q101 115.01433513758623 100 117.01433513758623"></path>
+<g transform="translate(34.2 26.4) scale(.78)">
+
+<path class="bk" d="M136 94 H162 L160 90 H138 Z"></path>
+<path class="bkl" d="M139 94 L138 105 M159 94 L160 105"></path>
+<path class="pn" d="M131 105 H181 Q186 105 186 110 V115 H131 Z"></path>
+<path class="bkl" d="M131 105 H181 Q186 105 186 110"></path>
+<path class="bk" d="M150 105 L151 100 H157 L159 105 Z"></path>
+<path class="bkl" d="M118 115 H188"></path>
+<path class="tb" d="M121 115 H184 Q191 115 193 111 Q192 118 186 121 H121 Q119 121 119 118 Q119 115 121 115 Z"></path>
+<rect class="bk" x="110" y="101" width="9" height="12" rx="3"></rect>
+<path class="bkl" d="M115 113 V123 M120 115 V123 M122 115 V123"></path>
+</g>
+<path class="fm" d="M110 120 H200 V160 C170 152 140 146 110 120 Z"></path>
+<path class="wv" d="M126 128 H146 M156 128 H180 M142 136 H164 M174 136 H194 M162 145 H188"></path>
+</g>
+<circle class="ring" cx="100" cy="100" r="90"></circle>
+<circle class="ring2" cx="100" cy="100" r="96"></circle>
+</svg></div>
+    <div>
+      <p class="kicker">Process</p>
+      <h1>Claude, Book Writing, and File Organization</h1>
+      <p class="dek">Sequel to "Carrying a Story for 33 Years"</p>
+      <p class="meta">Cam Klockner &middot; July 6, 2026 &middot; revised and published November 16, 2026</p>
+    </div>
   </header>
 
   <article>
-    <p><em>Sequel to "Carrying a Story for 33 Years"</em></p>
+    <p class="notice">The descriptions of Claude's tools and my workflow are outdated in this article. Look for a sequel coming soon.</p>
+
+    <p class="lead">It's a Tuesday, and I'm driving, and an idea hits me — uninvited, half-formed, gone if I don't catch it. I pull over and dictate it into my phone. Some days that's one line. Some days it's an entire chapter, or a piece of the timeline. An ending had been taunting me for days, and then, at mile marker 105 on the Garden State Parkway, it arrived whole. I pulled over and dictated a rough of the entire chapter — I didn't want to lose it before it evaporated.</p>
+
+    <p>That's a spark. This article is about what happens to it next.</p>
 
     <p>Last go 'round I took you through changing a workflow of 1,500 scattered files to a manageable structure: 122 files in four folders. It's 158 now, and it's reshaped constantly as I add, edit, or modify content — it's a book, my first novel (fingers crossed). Every new spark, every scene, every idea changes the count — a chapter added, two chapters consolidated into one, a character detail changed. The count is a moving target. What doesn't move is the process underneath it.</p>
 
     <p>Here are two ways the book grows — from a single spark to a filed chapter.</p>
 
-    <hr>
+    
 
     <h2>The Spark</h2>
 
-    <p>It's a Tuesday, and I'm driving, and an idea hits me — uninvited, half-formed, gone if I don't catch it. I pull over and dictate it into my phone. Some days that's one line. Some days it's an entire chapter, or a piece of the timeline. An ending had been taunting me for days, and then all of a sudden, at mile marker 105 on the Garden State Parkway, it arrived whole. I pulled over and dictated a rough of the entire chapter — I didn't want to lose it before it evaporated.</p>
-
-    <p>More often it's smaller. Today it's a single line: WOLF — the emergent AI at the center of the book — says something to Reese, its creator, that it shouldn't be able to say yet, not given what WOLF doesn't remember about itself. A small spark, same as the big one, caught the same way.</p>
+    <p>The Parkway ending was a big one. More often it's smaller. Today it's a single line: WOLF — the emergent AI at the center of the book — says something to Reese, its creator, that it shouldn't be able to say yet, not given what WOLF doesn't remember about itself. A small spark, same as the big one, caught the same way.</p>
 
     <p>That's the raw material. Ugly, unpunctuated, missing half its verbs.</p>
 
-    <p>Back at the desk, I hand it to Claude.AI and we go back and forth — not "write this for me," but "here's what I heard in my head, help me get it organized enough to say it." Fifteen minutes, or a half hour, a dozen small revisions, and the spark is a scene now. Something book worthy, maybe.</p>
+    <blockquote class="pull">An ending had been taunting me for days, and then, at mile marker 105 on the Garden State Parkway, it arrived whole.</blockquote>
 
-    <p>That's a fix on the old system. I used to save sparks into a hap-hazard file structure, and as they piled up, I lost track of what was where, when, and with whom. I'd often write the same idea again, differently, and end up with multiple versions competing for the same real estate in the story. Fifteen hundred files, most of them half-remembered sparks with nowhere to go.</p>
+    <p>Back at the desk, I hand it to Claude.AI and we go back and forth — not "write this for me," but "here's what I heard in my head, help me get it organized enough to say it." Fifteen minutes, or a half hour, a dozen small revisions, and the spark is a scene now. Something book-worthy, maybe.</p>
+
+    <p>That's a fix on the old system. I used to save sparks into a haphazard file structure, and as they piled up, I lost track of what was where, when, and with whom. I'd often write the same idea again, differently, and end up with multiple versions competing for the same real estate in the story. Fifteen hundred files, most of them half-remembered sparks with nowhere to go.</p>
 
     <p>Now, I drop it in the Project Inbox.</p>
 
-    <hr>
+    
 
     <h2>The Session</h2>
 
     <p>The book gets written because I sit down and decide to. The sparks get woven in along the way.</p>
 
-    <p>I open a Claude.AI prompt box and say I want to work on C032, a chapter. What comes back isn't a blank page — it's a briefing. Whatever prose already exists for that chapter. Every open gap. Every blocker, tagged and specific, not vague. Sometimes the note is about the writing itself: I started the scene too soon, or let it run too long past the moment it should have ended. Sometimes it's structural: this chapter owes the story a piece of information it hasn't delivered yet. The SPARKS.</p>
+    <p>I open a Claude.AI prompt box and say I want to work on C032, a chapter. What comes back isn't a blank page — it's a briefing. Whatever prose already exists for that chapter. Every open gap, pulled straight from the Control folder's gap logs. Every blocker, tagged and specific, not vague, pulled from the same place. Sometimes the note is about the writing itself: I started the scene too soon, or let it run too long past the moment it should have ended. Sometimes it's structural: this chapter owes the story a piece of information it hasn't delivered yet.</p>
 
-    <p>Then I write. Dictate, type, rearrange — whatever the task calls for. Five or six rounds, whatever it takes. After each pass, the response isn't a pat on the back — I built that in on purpose, in the Project Instructions. I ask what I'm doing right, what I'm doing wrong, and how I can improve it. It responds with specifics: this part landed, this part still doesn't close the gap. I build the fix from my own next spark, or a combination of a few Claude.AI suggests. That's the iteration, edging closer to something book worthy. Sometimes two or three rounds will do it. I recall one afternoon that took a dozen, and still needed sleeping on before I picked it up again the next day. Until I own it.</p>
+    <p>Some chapters start with nothing but the idea — no prose on the page yet, just the spark and the briefing built around it. Others already have a full draft waiting, and the work is closing what's still open.</p>
+
+    <p>Then I write. Dictate, type, rearrange — whatever the task calls for. Five or six rounds, whatever it takes. Some sessions finish the chapter. Some don't — half of it gets written, saved, and picked back up another day. The briefing picks up exactly where it left off, gaps and all.</p>
+
+    <p>After each pass, the response isn't a pat on the back — I built that in on purpose, in the Project Instructions. I ask what I'm doing right, what I'm doing wrong, and how I can improve it. It responds with specifics: this part landed, this part still doesn't close the gap. I build the fix from my own next spark, or a combination of a few Claude.AI suggests. That's the iteration, edging closer to something book-worthy. Sometimes two or three rounds will do it. I recall one afternoon that took a dozen, and still needed sleeping on before I picked it up again the next day. Until I own it.</p>
 
     <p>When it's right, into the Inbox it goes for step two.</p>
 
+    <blockquote class="pull">The Inbox doesn't care where a spark was born. It only cares that it shows up.</blockquote>
+
     <p>This all happens in Claude.AI Projects — memory from prompt box to prompt box, plus a cache of Source Files, so Claude.AI has everything already written on hand. Uploaded manually, though. Still the biggest drawback in the whole process.</p>
 
-    <p>The organizing, the migration, the insertions and integration — all the hard stuff — is done by Claude Cowork, where I also have a project for this novel in progress, <em>WOLF Awakens</em>. Cowork can access the assigned folders and files on my computer. It can edit them, rename them, move them. It runs on the same models Claude.AI does. Same abilities, full stop. So why don't I just do everything in Cowork? Because Cowork uses significantly more tokens for a creative session than Claude.AI does. So I write where it's cheap, and save Cowork for the heavy lifting — the organizing, the integration — used as sparingly as possible. That's only part of what Cowork was designed for.</p>
+    <p>The organizing, the migration, the insertions and integration — all the hard stuff — is done by Claude Cowork, where I also have a project for this novel in progress, <em>WOLF Awakens</em>. Cowork can access the assigned folders and files on my computer. It can edit them, rename them, move them. It runs on the same models Claude.AI does. Same abilities, full stop. Why don't I just do everything in Cowork? Because Cowork uses significantly more tokens for a creative session than Claude.AI does. I write where it's cheap, and save Cowork for the heavy lifting — the organizing, the integration — used as sparingly as possible. That's only part of what Cowork was designed for.</p>
 
     <p>Some sparks don't start in either place. Every so often an idea gets worked out on another AI platform entirely — wherever I happen to be when it surfaces. It comes back as a file and drops into the same Inbox as everything else. The Inbox doesn't care where a spark was born. It only cares that it shows up.</p>
 
-    <hr>
+    
 
     <h2>Inbox Files Don't Take Care of Themselves</h2>
 
     <p>As new work lands in the Inbox — sparks, finished chapters, or anything in between — Cowork's real work starts. Often, just because I can and because I'm curious, I'll run a spark by a different chat interface first, then copy the result of that exchange into the same Inbox, through File Explorer.</p>
 
-    <p>Cowork takes what's accumulated in the Inbox, breaks the files apart, and inserts each piece where it belongs — manuscript, Bible, or Control, wherever it's tagged for, or a new file if none exists yet. You get the idea. Then it updates the Mirror (more in a minute).</p>
+    <p>Cowork takes what's accumulated in the Inbox, breaks the files apart, and inserts each piece where it belongs — manuscript, Bible, or Control, wherever it's tagged for, or a new file if none exists yet. Then it updates the Mirror (more in a minute).</p>
 
-    <p>Now the boring part — if you haven't already fallen asleep, or put the article down ten minutes ago to go do something more interesting. Six folders. That's the whole machine.</p>
+    <p>Now the plumbing. Six folders. That's the whole machine.</p>
+
+    <figure class="machine">
+<svg viewBox="0 0 480 400" role="img" aria-label="Diagram: a spark and a writing session both feed the Inbox. The Inbox feeds Manuscript, Bible and Control. Those three are copied to Mirror, and retired material goes to Archive.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2D5A3D"/></marker></defs>
+<g fill="none" stroke="#2D5A3D" stroke-width="2">
+<path d="M125 60V84H215V104" marker-end="url(#ah)"/><path d="M355 60V84H265V104" marker-end="url(#ah)"/>
+<path d="M240 160V180"/><path d="M90 180H390"/>
+<path d="M90 180V204" marker-end="url(#ah)"/><path d="M240 180V204" marker-end="url(#ah)"/><path d="M390 180V204" marker-end="url(#ah)"/>
+<path d="M90 258V282"/><path d="M240 258V282"/><path d="M390 258V282"/><path d="M90 282H390"/>
+<path d="M140 282V326" marker-end="url(#ah)"/><path d="M340 282V326" stroke-dasharray="5 5" marker-end="url(#ah)"/>
+</g>
+<g stroke="#2D5A3D" stroke-width="2">
+<rect x="40" y="10" width="170" height="50" rx="8" fill="#E6DCC6"/><rect x="270" y="10" width="170" height="50" rx="8" fill="#E6DCC6"/>
+<rect x="140" y="106" width="200" height="54" rx="8" fill="#1E3D2A"/>
+<rect x="20" y="206" width="140" height="52" rx="8" fill="#F6F2E9"/><rect x="170" y="206" width="140" height="52" rx="8" fill="#F6F2E9"/><rect x="320" y="206" width="140" height="52" rx="8" fill="#F6F2E9"/>
+<rect x="60" y="328" width="160" height="52" rx="8" fill="#fff"/><rect x="260" y="328" width="160" height="52" rx="8" fill="#fff" stroke-dasharray="5 5"/>
+</g>
+<g class="lbl" text-anchor="middle">
+<text x="125" y="41">SPARK</text><text x="355" y="41">SESSION</text>
+<text x="240" y="139" fill="#F3EDE0">INBOX</text>
+<text x="90" y="238">MANUSCRIPT</text><text x="240" y="238">BIBLE</text><text x="390" y="238">CONTROL</text>
+<text x="140" y="360">MIRROR</text><text x="340" y="360">ARCHIVE</text>
+</g>
+<g class="sm"><text x="150" y="310">exact copy</text><text x="350" y="310">shelved, not gone</text></g>
+</svg>
+<figcaption>Six folders. That's the whole machine.</figcaption>
+</figure>
 
     <p>Inbox you already know. Three folders hold the actual book: Manuscript, Bible, Control. Two more keep it honest: Mirror, Archive.</p>
 
-    <ol>
-      <li>MANUSCRIPT — the chapters. 89 of them right now, 73,000 words, likely to land at 65-70 chapters and 90-100,000 words by the end. Every file here is a spark that made it.</li>
-      <li>BIBLE — the whole story in miniature. Characters, tech, research, timeline. If the manuscript vanished tomorrow, this is what I'd rebuild it from.</li>
-      <li>CONTROL — the rulebook. Naming, voice, technique, gap logs, continuity logs. What keeps Claude.AI, Cowork, and any other LLM pointed the same direction I am.</li>
-    </ol>
+    <div class="folders"><div class="folder"><h3>MANUSCRIPT</h3><p>the chapters. 89 of them right now, 73,000 words, likely to land at 65-70 chapters and 90-100,000 words by the end. Every file here is a spark that made it.</p></div><div class="folder"><h3>BIBLE</h3><p>the whole story in miniature. Characters, tech, research, timeline. If the manuscript vanished tomorrow, this is what I'd rebuild it from.</p></div><div class="folder"><h3>CONTROL</h3><p>the rulebook. Naming, voice, technique, gap logs, continuity logs. What keeps Claude.AI, Cowork, and any other LLM pointed the same direction I am.</p></div></div>
 
-    <p>Integration touches one of these, sometimes all three. Files get modified. Renamed. Replaced.</p>
+    <p>Integration touches one of these, sometimes all three, and files get modified, renamed and replaced.</p>
 
-    <p>Nothing gets deleted — except an exact duplicate. Everything else, old prose, retired instructions, abandoned sparks, goes to ARCHIVE. Reviewed, then shelved. Not gone.</p>
+    <p>Nothing gets deleted — except an exact duplicate. Everything else, old prose, retired instructions, abandoned sparks, goes to ARCHIVE, reviewed and then shelved. Not gone.</p>
 
-    <p>Last: MIRROR. Not a backup — a flat folder, no subfolders, an exact copy of Manuscript, Bible, and Control. Its whole job is convenience: one folder I can dump into Claude.AI's Source Files in a single upload, no digging through nested paths. Old Source Files out, new ones in from the Mirror. Done.</p>
+    <p>Last: MIRROR. Not a backup — a flat folder, no subfolders, an exact copy of Manuscript, Bible, and Control. Its whole job is convenience: one folder I can dump into Claude.AI's Source Files in a single upload, no digging through nested paths: old Source Files out, new ones in from the Mirror.</p>
 
-    <hr>
+    <div class="orn" aria-hidden="true"><span></span></div>
 
-    <p>None of this makes me write faster. I want to be honest about that, the same way I was honest about the file count. What it really does is keep me from getting distracted by the constant organizational and administrative grind of building a three- to four-hundred-page novel. Period. It closes the gap between the writer I am when a spark hits at full speed and the writer I am three months later, trying to remember whether I already used that idea somewhere else.</p>
+    <p>None of this makes me write faster. What it does is keep me from getting distracted by the constant organizational and administrative grind of building a three- to four-hundred-page novel. It closes the gap between the writer I am when a spark hits at full speed and the writer I am three months later, trying to remember whether I already used that idea somewhere else.</p>
+
+    <p>None of this held still long enough to finish this article, either. Parts of this piece changed underneath it twice before publishing. The methodology isn't a monument — it's a working document, same as the book. When the tools get better, it gets revised, or it falls behind the thing it was built to support.</p>
 
     <p>Forty years of engineering told me I needed a system, so I built one. It's been a work in progress for over six months, and I finally have something workable. It holds under load and tells me the truth when something doesn't fit. It doesn't write <em>WOLF Awakens</em> for me. It just makes sure every spark gets its chance to become fire.</p>
 
-    <p>Next article, I'll tell you how a technical guy is learning to be a creative writer.</p>
+    <p>I owe you two articles. First is a report on how my workflow and organization have changed along with Anthropic's improvements. Second, I need to tell you how a technical guy is learning to be a creative writer.</p>
 
-    <p>Regards — Cam Klockner</p>
+    <p class="signoff">Regards — Cam Klockner</p>
 
-    <p><em>R. Campbell Klockner writes about engineering, technology, and tools that reshape how we work.</em></p>
+    <p class="about"><em>R. Campbell Klockner is a retired engineer who brings an engineer's habits to writing fiction with AI.</em></p>
   </article>
 
 </body>

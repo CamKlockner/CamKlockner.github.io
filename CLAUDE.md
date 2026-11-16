@@ -54,8 +54,9 @@ Conventions:
    - `<header>` with `<h1>` title and
      `<p class="subtitle">Topic &mdash; Cam Klockner, MON DD, YYYY</p>`
    - `<article>` with the body, closing with the italic line
-     *R. Campbell Klockner writes about engineering, technology, and tools
-     that reshape how we work.*
+     *R. Campbell Klockner is a retired engineer who brings an engineer's
+     habits to writing fiction with AI.* (Cam's wording, 2026-11-16; the two
+     articles not yet republished still carry the older line.)
 3. Add an `<li>` link to the Articles list in `index.html` (newest first).
 4. Commit and push to `main`. GitHub Pages redeploys within a minute or two.
 
